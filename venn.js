@@ -1222,6 +1222,10 @@
             xOffset = (width -  (xRange.max - xRange.min) * scaling) / 2,
             yOffset = (height - (yRange.max - yRange.min) * scaling) / 2;
 
+            // while we're at it, position diagram bottom right too
+            xOffset = (width -  (xRange.max - xRange.min) * scaling),
+            yOffset = (height - (yRange.max - yRange.min) * scaling);
+
         var scaled = {};
         for (var i = 0; i < circles.length; ++i) {
             var circle = circles[i];
