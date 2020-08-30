@@ -658,9 +658,14 @@ export function scaleSolution(solution, width, height, padding) {
         yScaling = height / (yRange.max - yRange.min),
         scaling = Math.min(yScaling, xScaling),
 
-        // while we're at it, center the diagram too
-        xOffset = (width -  (xRange.max - xRange.min) * scaling) / 2,
-        yOffset = (height - (yRange.max - yRange.min) * scaling) / 2;
+        // // while we're at it, center the diagram too
+        // xOffset = (width -  (xRange.max - xRange.min) * scaling) / 2,
+        // yOffset = (height - (yRange.max - yRange.min) * scaling) / 2;
+
+        // while we're at it, position diagram bottom right too
+        xOffset = (width -  (xRange.max - xRange.min) * scaling),
+        yOffset = (height - (yRange.max - yRange.min) * scaling);
+        console.log('Simon’s intervention detected (layout.js)');
 
     var scaled = {};
     for (var i = 0; i < circles.length; ++i) {
