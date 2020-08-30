@@ -1225,6 +1225,7 @@
             // while we're at it, position diagram bottom right too
             xOffset = (width -  (xRange.max - xRange.min) * scaling),
             yOffset = (height - (yRange.max - yRange.min) * scaling);
+            console.log('Simon’s intervention detected');
 
         var scaled = {};
         for (var i = 0; i < circles.length; ++i) {
